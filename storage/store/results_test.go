@@ -43,7 +43,7 @@ func TestResultStoreAndRetrieve(t *testing.T) {
 	})
 }
 
-// TestResultStoreTwice verifies that [ExecutionResults.BatchStore] and [ExecutionResults.BatchIndex]
+// TestResultBatchStoreTwice verifies that [ExecutionResults.BatchStore] and [ExecutionResults.BatchIndex]
 // are idempotent when called repeatedly with the same data.
 func TestResultBatchStoreTwice(t *testing.T) {
 	lockManager := storage.NewTestingLockManager()

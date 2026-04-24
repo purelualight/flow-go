@@ -51,8 +51,8 @@ func (c *GroupCache[G, K, V]) RemoveGroup(group G) int {
 	return c.cache.(*lru.GroupCache[G, K, V]).RemoveGroup(group)
 }
 
-// RemoveGroup removes all cached items associated with the given groups.
-// RemoveGroup should be used to remove multiple groups to
+// RemoveGroups removes all cached items associated with the given groups.
+// RemoveGroups should be used to remove multiple groups to
 // reduce number of times cache is locked.
 func (c *GroupCache[G, K, V]) RemoveGroups(groups []G) int {
 	return c.cache.(*lru.GroupCache[G, K, V]).RemoveGroups(groups)
